@@ -1,0 +1,162 @@
+/* ------------------ General ------------------ */
+:root {
+  --accent-c: #7fffd4;
+  --accent-c-light: #bcffe9;
+  --accent-c-dark: #38b48b;
+  --accent-c-red: #FF7F7F;
+  --accent-c-red-dark: #B31414;
+  --lighter-gray: #dddddd;
+}
+
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.invisible {
+  display: none;
+}
+
+/* ------------------ Table ------------------ */
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid var(--lighter-gray);
+  text-align: left;
+  padding: 8px;
+}
+
+/* ------------------ Buttons ------------------ */
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+button, input[type=submit] {
+  background-color: var(--accent-c);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--accent-c-light);
+}
+
+button:disabled {
+  background-color: var(--lighter-gray);
+}
+
+/* ------------------ Select ------------------ */
+select {
+  min-width: 220px;
+  max-width: 300px;
+}
+
+/* ------------------ Menu ------------------ */
+nav {
+  text-align: center;
+  background-color: var(--accent-c);
+}
+
+nav ul#menu {
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav ul#menu li {
+  padding: 10px;
+}
+
+nav ul#menu li:hover {
+  background-color: var(--accent-c-light);
+}
+
+nav ul#menu li a {
+  font-size: 16pt;
+  text-decoration: none;
+}
+
+/* ------------------ Main Content ------------------ */
+div#main {
+  width: 70%;
+  margin: 40px auto;
+}
+
+div.mainElement {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+div.mainElement h1,
+div.mainElement h3 {
+  text-align: center;
+}
+
+div#categorySubcategorySelection {
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------ Table Overview ------------------ */
+div.mainElement#overview {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0;
+  margin: 15px 0;
+  overflow-x: scroll;
+}
+
+div.mainElement#overview tr:nth-child(even) {
+  background-color: var(--lighter-gray);
+}
+
+/* ------------------ Quiz ------------------ */
+div.mainElement#quiz div {
+  padding: 10px 0;
+}
+
+div.mainElement#quiz ul {
+  list-style-type: none;
+}
+
+div.mainElement#quiz input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+div.mainElement#quiz label {
+  padding-left: 5px;
+}
+
+div.mainElement#quiz label.correct {
+  color: var(--accent-c-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-c);
+}
+
+div.mainElement#quiz label.incorrect {
+  color: var(--accent-c-red-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-c-red);
+}
+
+/* ------------------ Admin ------------------ */
+table.adminTable {
+  display: flex;
+  justify-content: center;
+}
